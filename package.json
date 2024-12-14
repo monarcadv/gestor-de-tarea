@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn client/api/serve.ts",
+    "start": "ts-node-dev --respawn backend/api/serve.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "javascript": "tsc -w src/typescript/main.ts",
     "tsc" : "tsc -w"
