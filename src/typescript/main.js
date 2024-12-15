@@ -39,17 +39,25 @@ function aps() {
         var res, data;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, fetch('http://localhost:4040/api/data/')];
+                case 0: return [4 /*yield*/, fetch('https://gestor-de-tarea.onrender.com/api/data')];
                 case 1:
                     res = _a.sent();
                     return [4 /*yield*/, res.json()];
                 case 2:
                     data = _a.sent();
-                    console.log(data);
-                    document.body.innerHTML = JSON.stringify(data);
+                    renderApis(data);
                     return [2 /*return*/];
             }
         });
+    });
+}
+function renderApis(data) {
+    var ul = document.getElementById('ul');
+    data.forEach(function (datas) {
+        var li = document.createElement('li');
+        li.innerHTML = "<h2>".concat(datas.descripcion, "</h2> <p>").concat(datas.estado, "</p>");
+        ul === null || ul === void 0 ? void 0 : ul.appendChild(li);
+        console.log(datas);
     });
 }
 aps();

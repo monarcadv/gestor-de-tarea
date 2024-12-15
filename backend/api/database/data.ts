@@ -3,18 +3,10 @@ let tarea = {
         {
             "id": 1,
             "descripcion": "Tarea 1",
-            "estado": "Pendiente"
+            "estado": "Pendiente",
+            "date":11/11/2024
         },
-        {
-            "id": 2,
-            "descripcion": "Tarea 2",
-            "estado": "En progreso"
-        },
-        {
-            "id": 3,
-            "descripcion": "Tarea 3",
-            "estado": "Completada"
-        }
+       
     ]
 }
 module.exports = tarea
